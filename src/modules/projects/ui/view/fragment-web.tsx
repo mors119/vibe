@@ -16,7 +16,7 @@ export function FragmentWeb({ data }: Props) {
     setFragmentKey((prev) => prev + 1);
   };
 
-  const handleCope = () => {
+  const handleCopy = () => {
     navigator.clipboard.writeText(data.sandboxUrl);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -34,7 +34,7 @@ export function FragmentWeb({ data }: Props) {
           <Button
             size="sm"
             variant="outline"
-            onClick={handleCope}
+            onClick={handleCopy}
             disabled={!data.sandboxUrl || copied}
             className="flex-1 justify-start text-start font-normal">
             <span className="truncate">{data.sandboxUrl}</span>
