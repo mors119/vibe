@@ -8,8 +8,8 @@ import {
 import { Fragment } from '@/generated/prisma';
 import { MessagesContainer } from '@/modules/messages/ui/components/messages-container';
 import { Suspense, useState } from 'react';
-import { ProjectHeader } from './project-header';
-import { FragmentWeb } from './fragment-web';
+import { ProjectHeader } from '../../../messages/ui/components/project-header';
+import { FragmentWeb } from '../../../messages/ui/components/fragment-web';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CodeIcon, CrownIcon, EyeIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -42,7 +42,7 @@ export const ProjectView = ({ projectId }: Props) => {
             />
           </Suspense>
         </ResizablePanel>
-        <ResizableHandle withHandle />
+        <ResizableHandle className="hover:bg-primary transition-colors" />
         <ResizablePanel defaultSize={65} minSize={50}>
           <Tabs
             className="h-full gap-y-0"
